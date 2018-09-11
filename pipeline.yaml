@@ -11,3 +11,5 @@ jobs:
     - get: resource-tutorial
     - task: hello-world
       file: resource-tutorial/tasks/hello-world.yaml
+    - task: execute-task
+      file: resource-tutorial/tasks/execute-task.yaml

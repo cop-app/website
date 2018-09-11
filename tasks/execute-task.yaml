@@ -8,5 +8,4 @@ inputs:
   - name: resource-tutorial
 
 run:
-  path: chmod
-  args: ["+x", "resource-tutorial/tasks/scripts/test.sh"]
+  path: "resource-tutorial/tasks/scripts/test.sh"
