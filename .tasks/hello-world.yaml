@@ -7,7 +7,7 @@ image_resource:
     tag: 2.1'
 
 inputs:
-  - resource-tutorial
+  - name: resource-tutorial
 
 run:
   path: resource-tutorial/.tasks/scripts/test.sh
