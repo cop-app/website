@@ -8,4 +8,4 @@ inputs:
   - name: resource-tutorial
 
 run:
-  path: resource-tutorial/.tasks/scripts/test.sh
+  path: resource-tutorial/tasks/scripts/test.sh

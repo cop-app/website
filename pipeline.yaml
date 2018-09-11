@@ -10,4 +10,4 @@ jobs:
   plan:
     - get: resource-tutorial
     - task: hello-world
-      file: resource-tutorial/.tasks/hello-world.yaml
+      file: resource-tutorial/tasks/hello-world.yaml
