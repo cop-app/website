@@ -8,5 +8,5 @@ inputs:
   - name: resource-tutorial
 
 run:
-  path: echo
-  args: ["Hi"]
+  path: cat
+  args: ["resource-tutorial/tasks/scripts/test.sh"]
