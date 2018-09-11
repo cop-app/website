@@ -1,15 +1,13 @@
+resources:
+  - name: resource-tutorial
+    type: git
+    source:
+      uri: https://github.com/cop-app-website
+      branch: master
 jobs:
-- name: show-animal-names
+- name: job-hello-world
+  public: true
   plan:
-  - task: show-animal-names
-    config:
-      platform: linux
-      image_resource:
-        type: docker-image
-        source: {repository: busybox}
-      run:
-        path: env
-        args: []
-      params:
-        CAT_NAME: ((cat-name))
-        DOG_NAME: ((dog-name))
+    - get: resource-tutorial
+    - task: hello-world
+      file: resource-tutorial/.tasks/hello-world.yaml
