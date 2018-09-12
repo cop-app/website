@@ -23,6 +23,6 @@ jobs:
     - task: execute-task
       file: resource-tutorial/tasks/execute-task.yaml
   on_failure:
-    put: slack-alert
+    put: notify
     params:
       alert_type: failed
