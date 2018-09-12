@@ -8,5 +8,5 @@ inputs:
   - name: resource-tutorial
 
 run:
-  path: sleep
-  args: ["10"]
+  path: bash
+  args: ["resource-tutorial/tasks/scripts/test.sh"]
