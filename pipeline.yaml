@@ -1,9 +1,18 @@
+resource_types:
+- name: slack-alert
+  type: docker-image
+  source:
+    repository: arbourd/concourse-slack-alert-resource
 resources:
   - name: resource-tutorial
     type: git
     source:
       uri: https://github.com/cop-app/website
       branch: master
+  - name: notify
+    type: slack-alert
+    source:
+      url: https://hooks.slack.com/services/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
 jobs:
 - name: job-hello-world
   public: true
@@ -13,3 +22,7 @@ jobs:
       file: resource-tutorial/tasks/hello-world.yaml
     - task: execute-task
       file: resource-tutorial/tasks/execute-task.yaml
+  on_failure:
+    put: slack-alert
+    params:
+      alert_type: failed
